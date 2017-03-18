@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="GEj-ZR-etL" customClass="PlayingBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="漂泊的家" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEy-zx-P9v">
+                    <rect key="frame" x="48" y="8" width="205" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="老狼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CW-9U-nAL">
+                    <rect key="frame" x="48" y="22" width="197" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.1970343291759491" green="0.19702842831611633" blue="0.19703182578086853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mWa-xi-b2t">
+                    <rect key="frame" x="0.0" y="40" width="375" height="3"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </progressView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l43-DN-PTu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="GIT-Rf-fa5">
+                    <rect key="frame" x="0.0" y="1" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib3-92-iZd">
+                    <rect key="frame" x="300" y="11" width="35" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="bt_tabbar_midplay_play_button_press"/>
+                    <state key="selected" image="bt_mv_playpage_control_pause_button_press"/>
+                    <connections>
+                        <action selector="playBtnAction:" destination="GEj-ZR-etL" eventType="touchUpInside" id="Hm6-r0-0tD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZO-Bs-iu2">
+                    <rect key="frame" x="337" y="4" width="30" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="bt_mv_playpage_control_next_press"/>
+                    <connections>
+                        <action selector="nextAction:" destination="GEj-ZR-etL" eventType="touchUpInside" id="7gh-8Q-2eF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="artworkIV" destination="GIT-Rf-fa5" id="kNH-aV-KFC"/>
+                <outlet property="authorLabel" destination="7CW-9U-nAL" id="nqt-aD-WZB"/>
+                <outlet property="playBtn" destination="ib3-92-iZd" id="3mi-CG-LB6"/>
+                <outlet property="progressView" destination="mWa-xi-b2t" id="lcT-sP-4PX"/>
+                <outlet property="titleLabel" destination="QEy-zx-P9v" id="amN-97-Esk"/>
+                <outletCollection property="gestureRecognizers" destination="zwH-Ee-2h3" appends="YES" id="WTX-60-ufT"/>
+            </connections>
+            <point key="canvasLocation" x="159.5" y="-67.5"/>
+        </view>
+        <tapGestureRecognizer id="zwH-Ee-2h3">
+            <connections>
+                <action selector="tapAction:" destination="GEj-ZR-etL" id="dJy-ww-eqv"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="1" width="580" height="573"/>
+        <image name="bt_mv_playpage_control_next_press" width="41" height="46"/>
+        <image name="bt_mv_playpage_control_pause_button_press" width="72" height="46"/>
+        <image name="bt_tabbar_midplay_play_button_press" width="60" height="60"/>
+    </resources>
+</document>
